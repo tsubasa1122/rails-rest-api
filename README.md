@@ -1,24 +1,15 @@
-# README
+# Rails-rest-api学習用
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Environments
 
-Things you may want to cover:
+Ruby '2.5.1'
+Rails '5.2.3'
 
-* Ruby version
+# Functions
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+・API authentication system by Ruby On Rails
+・login Facebook via API
+・get Facebook User Data via Token
+・Customizing JSON response
+・Improve Rails performance
+・Upload Image to Server via API
