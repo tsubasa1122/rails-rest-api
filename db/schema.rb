@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_03_122343) do
+ActiveRecord::Schema.define(version: 2019_11_03_125404) do
+
+  create_table "books", force: :cascade do |t|
+    t.string "imate"
+    t.string "author"
+    t.string "title"
+    t.string "string"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "title"
+    t.integer "content_rating"
+    t.string "recommend_rating"
+    t.string "integer"
+    t.string "average_rating"
+    t.string "floot"
+    t.integer "user_id"
+    t.integer "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_reviews_on_book_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
