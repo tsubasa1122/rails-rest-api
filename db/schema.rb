@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_11_03_125404) do
 
   create_table "books", force: :cascade do |t|
-    t.string "imate"
+    t.string "image"
     t.string "author"
     t.string "title"
     t.string "string"
@@ -24,10 +24,8 @@ ActiveRecord::Schema.define(version: 2019_11_03_125404) do
   create_table "reviews", force: :cascade do |t|
     t.string "title"
     t.integer "content_rating"
-    t.string "recommend_rating"
-    t.string "integer"
-    t.string "average_rating"
-    t.string "floot"
+    t.integer "recommend_rating"
+    t.float "average_rating"
     t.integer "user_id"
     t.integer "book_id"
     t.datetime "created_at", null: false
