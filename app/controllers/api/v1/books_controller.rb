@@ -3,11 +3,13 @@ class Api::V1::BooksController < ApplicationController
 
   def index
     @books = Book.all
-    json_response("Index books successfully", true, {books: @books}, :ok)
+    book_serializers = parse_json(@books)
+    json_response("Index books successfully", true, {books: book_serializers}, :ok)
   end
 
   def show
-    json_response("show book successfully", true, {book: @book}, :ok)
+    book_serializer = parse_json(@book)
+    json_response("show book successfully", true, {book: book_serializer}, :ok)
   end
 
   private
