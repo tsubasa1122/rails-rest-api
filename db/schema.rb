@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_03_125404) do
+ActiveRecord::Schema.define(version: 2019_11_04_050526) do
 
   create_table "books", force: :cascade do |t|
     t.string "image"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_11_03_125404) do
     t.string "string"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "reviews_count", default: 0, null: false
   end
 
   create_table "reviews", force: :cascade do |t|

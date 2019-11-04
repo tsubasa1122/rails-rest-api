@@ -11,3 +11,15 @@ puts "Seeding 20 books"
 20.times do
   Book.create!(title: Faker::Book.title, author: Faker::Book.author, image: Faker::Avatar.image)
 end
+
+puts "Seeding 10 users"
+
+10.times do
+  User.create!(email: Faker::Internet.email, password: "test_user")
+end
+
+puts "Seeding 100 reviews"
+
+100.times do
+  Review.create!(title: "best book user", content_rating: Faker::Number.between(1,10), recommend_rating: Faker::Number.between(1,10), user_id: Faker::Number.between(1,10), book_id: Faker::Number.between(1,20))
+end
